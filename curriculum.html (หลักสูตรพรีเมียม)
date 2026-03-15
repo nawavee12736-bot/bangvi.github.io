@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หลักสูตรพรีเมียม | โรงเรียนตาดีกาพรีเมียม</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js สำหรับระบบ Tab -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Prompt', sans-serif; }
+        .tab-active { border-bottom: 4px solid #10b981; color: #064e3b; font-weight: 700; }
+        .curriculum-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <!-- Navigation (รักษาความสม่ำเสมอทุกหน้า) -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <span class="text-3xl">🕌</span>
+                <h1 class="text-xl font-bold text-emerald-900">ตาดีกาพรีเมียม</h1>
+            </a>
+            <div class="hidden lg:flex space-x-8 font-medium text-gray-600">
+                <a href="index.html" class="hover:text-emerald-700">หน้าแรก</a>
+                <a href="about.html" class="hover:text-emerald-700">รู้จักโรงเรียน</a>
+                <a href="curriculum.html" class="text-emerald-700 font-bold border-b-2 border-emerald-700">หลักสูตร</a>
+                <a href="gallery.html" class="hover:text-emerald-700">กิจกรรม</a>
+                <a href="contact.html" class="hover:text-emerald-700">ติดต่อเรา</a>
+            </div>
+            <a href="admission.html" class="bg-emerald-800 text-white px-6 py-2 rounded-full font-bold">รับสมัครเรียน</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="bg-emerald-900 py-20 text-white text-center">
+        <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">หลักสูตรการศึกษาอิสลามบูรณาการ</h1>
+            <p class="text-emerald-100 text-lg opacity-80">มุ่งเน้นความเป็นเลิศทางวิชาการและจริยธรรมที่งดงาม ตามมาตรฐานกระทรวงศึกษาธิการและหลักการศาสนา</p>
+        </div>
+    </section>
+
+    <!-- Core Subjects Grid -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900">วิชาหลักที่เรามุ่งเน้น</h2>
+            <div class="w-20 h-1 bg-amber-500 mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Subject 1 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-emerald-100 curriculum-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-quran"></i></div>
+                <h3 class="font-bold text-xl mb-3 text-emerald-900">อัลกุรอาน & ตัจญ์วีด</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">ฝึกอ่านตามหลักตัจญ์วีดที่ถูกต้อง และท่องจำซูเราะห์พื้นฐานด้วยเทคนิคที่จดจำง่าย</p>
+            </div>
+            <!-- Subject 2 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-emerald-100 curriculum-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-heart"></i></div>
+                <h3 class="font-bold text-xl mb-3 text-emerald-900">เตาฮีด & อัคลาก</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">ปลูกฝังความศรัทธาที่ถูกต้องและมารยาทอันดีงามต่อตนเอง ครอบครัว และสังคม</p>
+            </div>
+            <!-- Subject 3 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-emerald-100 curriculum-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-14 h-14 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-language"></i></div>
+                <h3 class="font-bold text-xl mb-3 text-emerald-900">อาหรับ & มลายู</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">เน้นการสื่อสารเบื้องต้นและความเข้าใจในศัพท์ทางศาสนาเพื่อการเรียนรู้ที่ลึกซึ้ง</p>
+            </div>
+            <!-- Subject 4 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-emerald-100 curriculum-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-14 h-14 bg-purple-100 text-purple-700 rounded-2xl flex items-center justify-center text-2xl mb-6"><i class="fas fa-mosque"></i></div>
+                <h3 class="font-bold text-xl mb-3 text-emerald-900">ฟิกฮฺ (ศาสนบัญญัติ)</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">เรียนรู้หลักปฏิบัติศาสนกิจในชีวิตประจำวัน เช่น การละหมาด การถือศีลอด อย่างถูกต้อง</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Levels Detail with Alpine.js Tabs -->
+    <section class="py-20 bg-white" x-data="{ tab: 'level1' }">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">โครงสร้างหลักสูตรแต่ละระดับชั้น</h2>
+            
+            <!-- Tab Buttons -->
+            <div class="flex justify-center mb-12 border-b">
+                <button @click="tab = 'level1'" :class="{ 'tab-active': tab === 'level1' }" class="px-8 py-4 transition">ระดับปฐมวัย (ตัมฮีดีย์)</button>
+                <button @click="tab = 'level2'" :class="{ 'tab-active': tab === 'level2' }" class="px-8 py-4 transition">ระดับประถมต้น (ปีที่ 1-3)</button>
+                <button @click="tab = 'level3'" :class="{ 'tab-active': tab === 'level3' }" class="px-8 py-4 transition">ระดับประถมปลาย (ปีที่ 4-6)</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="bg-slate-50 rounded-3xl p-8 md:p-12 shadow-inner">
+                <!-- Level 1 -->
+                <div x-show="tab === 'level1'" x-transition>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-2xl font-bold text-emerald-900 mb-6 italic">เตรียมความพร้อมเยาวชน</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">เน้นการทำความคุ้นเคยกับตัวอักษรภาษาอาหรับ มารยาทพื้นฐาน และการท่องจำบทดุอาอ์สั้นๆ ผ่านการร้องเพลงและกิจกรรมนันทนาการ</p>
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80" class="rounded-2xl shadow-lg" alt="Kindergarten Activity">
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-emerald-700 uppercase tracking-wider">วิชาที่เรียน:</h4>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-star text-amber-500 mr-3"></i> อัลฟะอาบา (ภาษาอาหรับพื้นฐาน)</div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-star text-amber-500 mr-3"></i> ดุอาอ์ในชีวิตประจำวัน</div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-star text-amber-500 mr-3"></i> มารยาทเด็กมุสลิม</div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-star text-amber-500 mr-3"></i> ศิลปะสร้างสรรค์</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Level 2 -->
+                <div x-show="tab === 'level2'" x-transition>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-2xl font-bold text-emerald-900 mb-6 italic">วางรากฐานทางศาสนา</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">เน้นการอ่านอัลกุรอานด้วยระบบตัจญ์วีด เรียนรู้ประวัติท่านนบี และฝึกการละหมาดที่ถูกต้องทั้งภาคทฤษฎีและปฏิบัติ</p>
+                            <img src="https://images.unsplash.com/photo-1544427928-c49cdfebf494?auto=format&fit=crop&q=80" class="rounded-2xl shadow-lg" alt="Primary Level 1-3">
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-emerald-700 uppercase tracking-wider">วิชาที่เรียน:</h4>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-3"></i> กีรอาตี / อัลกุรอาน 1</div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-3"></i> ฟิกฮฺ (การอาบน้ำละหมาด/การละหมาด)</div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-3"></i> ตารีค (ประวัติศาสดา)</div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-check-circle text-emerald-500 mr-3"></i> ภาษาอาหรับเบื้องต้น</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Level 3 -->
+                <div x-show="tab === 'level3'" x-transition>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-2xl font-bold text-emerald-900 mb-6 italic">เตรียมพร้อมสู่สังคมดีงาม</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">เจาะลึกวิชาศาสนบัญญัติขั้นสูง อัลกุรอานพร้อมคำแปลเบื้องต้น และทักษะภาษาอาหรับ-มลายูเพื่อการศึกษาต่อ</p>
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80" class="rounded-2xl shadow-lg" alt="Primary Level 4-6">
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-emerald-700 uppercase tracking-wider">วิชาที่เรียน:</h4>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-graduation-cap text-blue-500 mr-3"></i> อัลกุรอาน & ตัฟซีรเบื้องต้น</div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-graduation-cap text-blue-500 mr-3"></i> เตาฮีด (หลักศรัทธา 6 ประการ)</div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-graduation-cap text-blue-500 mr-3"></i> ภาษาอาหรับ/ภาษามลายู (ยาวี)</div>
+                            <div class="bg-white p-4 rounded-xl shadow-sm flex items-center"><i class="fas fa-graduation-cap text-blue-500 mr-3"></i> กิจกรรมทัศนศึกษาศึกษาแหล่งเรียนรู้</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Schedule Preview -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto bg-emerald-900 text-white rounded-3xl p-10 shadow-2xl overflow-hidden relative">
+            <div class="relative z-10 text-center mb-10">
+                <h2 class="text-3xl font-bold">ตารางเวลาเรียน (ตัวอย่าง)</h2>
+                <p class="opacity-70">วันเสาร์ - วันอาทิตย์</p>
+            </div>
+            <div class="relative z-10 space-y-4">
+                <div class="flex justify-between border-b border-emerald-800 pb-2"><span>08:30 - 08:45</span> <span>เข้าแถวเคารพธงชาติ / อ่านดุอาอ์</span></div>
+                <div class="flex justify-between border-b border-emerald-800 pb-2 font-bold text-amber-400"><span>08:45 - 10:15</span> <span>วิชาหลักช่วงเช้า (อัลกุรอาน)</span></div>
+                <div class="flex justify-between border-b border-emerald-800 pb-2"><span>10:15 - 10:45</span> <span>พักรับประทานอาหารว่าง</span></div>
+                <div class="flex justify-between border-b border-emerald-800 pb-2 font-bold text-amber-400"><span>10:45 - 12:00</span> <span>วิชาที่ 2 (ศาสนบัญญัติ / ภาษา)</span></div>
+                <div class="flex justify-between border-b border-emerald-800 pb-2"><span>12:00 - 13:00</span> <span>ละหมาดซุฮฺรีร่วมกัน / เลิกเรียน</span></div>
+            </div>
+            <!-- Decoration -->
+            <div class="absolute -right-20 -bottom-20 text-[200px] opacity-10">🕌</div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 text-center">
+        <p class="text-xl text-gray-600 mb-8">หากท่านต้องการข้อมูลหลักสูตรฉบับเต็ม สามารถดาวน์โหลดได้ที่นี่</p>
+        <a href="#" class="inline-flex items-center space-x-3 bg-white border-2 border-emerald-800 text-emerald-800 px-8 py-3 rounded-full font-bold hover:bg-emerald-800 hover:text-white transition">
+            <i class="fas fa-file-pdf"></i>
+            <span>ดาวน์โหลดคู่มือการเรียน PDF</span>
+        </a>
+    </section>
+
+    <!-- Footer (เหมือนกันทุกหน้า) -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-6 text-center">
+        <p>&copy; 2024 Tadika Premium Academy. มุ่งมั่นสร้างเยาวชนมุสลิมที่ดีงาม</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
