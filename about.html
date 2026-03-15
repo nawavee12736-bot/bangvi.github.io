@@ -1,38 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-<meta charset="UTF-8">
-<title>เกี่ยวกับโรงเรียน</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รู้จักเรา | โรงเรียนตาดีกาพรีเมียม</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Prompt', sans-serif; }
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(6, 78, 59, 0.9), rgba(6, 78, 59, 0.7));
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #10b981;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
+<body class="bg-white">
 
-<body>
+    <!-- Navigation (เหมือนหน้าแรก) -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <span class="text-3xl">🕌</span>
+                <h1 class="text-xl font-bold text-emerald-900">ตาดีกาพรีเมียม</h1>
+            </a>
+            <div class="hidden lg:flex space-x-8 font-medium text-gray-600">
+                <a href="index.html" class="hover:text-emerald-700">หน้าแรก</a>
+                <a href="about.html" class="text-emerald-700 font-bold border-b-2 border-emerald-700">รู้จักโรงเรียน</a>
+                <a href="curriculum.html" class="hover:text-emerald-700">หลักสูตร</a>
+                <a href="gallery.html" class="hover:text-emerald-700">กิจกรรม</a>
+                <a href="contact.html" class="hover:text-emerald-700">ติดต่อเรา</a>
+            </div>
+            <a href="admission.html" class="bg-emerald-800 text-white px-6 py-2 rounded-full font-bold hover:bg-emerald-700 transition">รับสมัครเรียน</a>
+        </div>
+    </nav>
 
-<header>
-<h1>เกี่ยวกับโรงเรียน</h1>
-</header>
+    <!-- Header Section -->
+    <section class="relative h-[400px] flex items-center justify-center text-white overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1523050853064-59ef04395906?auto=format&fit=crop&q=80" class="absolute inset-0 w-full h-full object-cover" alt="School building">
+        <div class="absolute inset-0 gradient-overlay"></div>
+        <div class="relative z-10 text-center" data-aos="fade-up">
+            <h1 class="text-5xl font-bold mb-4">เกี่ยวกับเรา</h1>
+            <p class="text-xl opacity-90">ประวัติความเป็นมา วิสัยทัศน์ และคณะครูของเรา</p>
+        </div>
+    </section>
 
-<nav>
-<a href="index.html">หน้าแรก</a>
-<a href="about.html">เกี่ยวกับโรงเรียน</a>
-<a href="news.html">ข่าวสาร</a>
-<a href="gallery.html">กิจกรรม</a>
-<a href="contact.html">ติดต่อ</a>
-</nav>
+    <!-- Vision & Mission -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-emerald-50 p-12 rounded-3xl" data-aos="fade-right">
+                <div class="text-emerald-700 text-4xl mb-6"><i class="fas fa-eye"></i></div>
+                <h2 class="text-3xl font-bold text-emerald-900 mb-4">วิสัยทัศน์</h2>
+                <p class="text-lg text-emerald-800 leading-relaxed">
+                    เป็นสถาบันการศึกษาอิสลามต้นแบบที่ผสานเทคโนโลยีสมัยใหม่เข้ากับจริยธรรมอันดีงาม เพื่อสร้างเยาวชนที่มีความพร้อมทั้งทางโลกและทางธรรมสู่สังคมสากล
+                </p>
+            </div>
+            <div class="bg-amber-50 p-12 rounded-3xl" data-aos="fade-left">
+                <div class="text-amber-600 text-4xl mb-6"><i class="fas fa-bullseye"></i></div>
+                <h2 class="text-3xl font-bold text-amber-900 mb-4">พันธกิจ</h2>
+                <ul class="space-y-3 text-amber-800 text-lg">
+                    <li><i class="fas fa-check mr-2"></i> จัดการเรียนรู้อัลกุรอานด้วยระบบที่เข้าใจง่าย</li>
+                    <li><i class="fas fa-check mr-2"></i> ปลูกฝังมารยาทอิสลาม (อัคลาก) ในทุกกิจกรรม</li>
+                    <li><i class="fas fa-check mr-2"></i> พัฒนาสื่อการสอนที่ทันสมัยและน่าสนใจ</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-<div class="container">
+    <!-- History Timeline -->
+    <section class="py-20 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-emerald-900 mb-16">ก้าวสำคัญของเรา</h2>
+            
+            <div class="relative timeline-line">
+                <!-- Timeline Item 1 -->
+                <div class="relative mb-12 flex justify-between items-center w-full right-timeline" data-aos="fade-right">
+                    <div class="hidden md:block w-5/12"></div>
+                    <div class="z-20 flex items-center bg-emerald-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white font-mono">1</h1>
+                    </div>
+                    <div class="w-full md:w-5/12 bg-white p-6 rounded-2xl shadow-md border-l-4 border-emerald-500">
+                        <h3 class="font-bold text-emerald-900 text-xl mb-1">จุดเริ่มต้น (พ.ศ. 2550)</h3>
+                        <p class="text-gray-600">ก่อตั้งโดยกลุ่มอาสาสมัครในชุมชน เพื่อให้ลูกหลานได้เรียนรู้พื้นฐานศาสนาในวันเสาร์-อาทิตย์</p>
+                    </div>
+                </div>
 
-<h2>ประวัติโรงเรียน</h2>
-<p>โรงเรียนของเราก่อตั้งขึ้นเพื่อพัฒนาการศึกษาของเยาวชน</p>
+                <!-- Timeline Item 2 -->
+                <div class="relative mb-12 flex justify-between items-center w-full left-timeline" data-aos="fade-left">
+                    <div class="w-full md:w-5/12 bg-white p-6 rounded-2xl shadow-md border-r-4 border-emerald-500 text-right">
+                        <h3 class="font-bold text-emerald-900 text-xl mb-1">การยกระดับมาตรฐาน (พ.ศ. 2560)</h3>
+                        <p class="text-gray-600">ได้รับการรับรองมาตรฐานการศึกษา และเริ่มนำระบบมัลติมีเดียมาใช้ในห้องเรียน</p>
+                    </div>
+                    <div class="z-20 flex items-center bg-emerald-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white font-mono">2</h1>
+                    </div>
+                    <div class="hidden md:block w-5/12"></div>
+                </div>
 
-<h2>วิสัยทัศน์</h2>
-<p>มุ่งสร้างนักเรียนที่มีความรู้ คุณธรรม และทักษะชีวิต</p>
+                <!-- Timeline Item 3 -->
+                <div class="relative mb-12 flex justify-between items-center w-full right-timeline" data-aos="fade-up">
+                    <div class="hidden md:block w-5/12"></div>
+                    <div class="z-20 flex items-center bg-emerald-600 shadow-xl w-8 h-8 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white font-mono">3</h1>
+                    </div>
+                    <div class="w-full md:w-5/12 bg-white p-6 rounded-2xl shadow-md border-l-4 border-emerald-500">
+                        <h3 class="font-bold text-emerald-900 text-xl mb-1">ก้าวสู่ระดับพรีเมียม (ปัจจุบัน)</h3>
+                        <p class="text-gray-600">พัฒนาเว็บไซต์ ระบบดูแลนักเรียนออนไลน์ และอาคารเรียนปรับอากาศครบวงจร</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <!-- Teachers Section -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-emerald-900 mb-4">คณะครูและบุคลากร</h2>
+            <p class="text-gray-600 italic">"ความสำเร็จของนักเรียน เริ่มต้นจากครูที่ตั้งใจ"</p>
+        </div>
 
-<footer>
-<p>© 2026 School Website</p>
-</footer>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Teacher 1 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative overflow-hidden rounded-2xl mb-4 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1544168190-79c17527004f?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" alt="Principal">
+                    <div class="absolute inset-0 bg-emerald-900/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+                        <div class="flex space-x-4 text-white text-xl">
+                            <i class="fab fa-facebook hover:text-amber-400"></i>
+                            <i class="fas fa-envelope hover:text-amber-400"></i>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-emerald-900">อุสตาซ อับดุลเลาะห์</h3>
+                <p class="text-amber-600 font-semibold mb-2">ผู้อำนวยการโรงเรียน</p>
+                <p class="text-gray-500 text-sm">ปริญญาโท สาขาอิสลามศึกษา มหาวิทยาลัยอัล-อัซฮัร</p>
+            </div>
 
+            <!-- Teacher 2 -->
+            <div class="group" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative overflow-hidden rounded-2xl mb-4 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover transition duration-500 group-hover:scale-110" alt="Teacher">
+                    <div class="absolute inset-0 bg-emerald-900/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+                        <div class="flex space-x-4 text-white text-xl">
+                            <i class="fab fa-facebook hover:text-amber-400"></i>
+                            <i class="fas fa-envelope hover:text-amber-400"></i>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold text-emerald-900">ครูมารีแยม</h3>
+                <p class="text-amber-600 font-semibold mb-2">หัวหน้าวิชาการ</p>
+                <p class="text-gray-500 text-sm">ผู้เชี่ยวชาญด้านการสอนอัลกุรอานด้วยระบบกีรอาตี</p>
+            </div>
+
+            <!-- เพิ่มครูคนอื่นๆ ได้ที่นี่... -->
+        </div>
+    </section>
+
+    <!-- Footer (เหมือนหน้าแรก) -->
+    <footer class="bg-emerald-950 text-emerald-100 py-12 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <p>&copy; 2024 Tadika Premium Academy. มุ่งมั่นสร้างสรรค์สังคมด้วยการศึกษา</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
