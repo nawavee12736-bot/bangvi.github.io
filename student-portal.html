@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบสารสนเทศนักเรียน | โรงเรียนตาดีกาพรีเมียม</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Prompt', sans-serif; background-color: #f8fafc; }
+        .sidebar-link-active { background-color: #065f46; color: white; }
+    </style>
+</head>
+<body x-data="{ menu: 'dashboard', user: 'น.ส. อามีนะห์ รักเรียน' }">
+
+    <!-- Mobile Header -->
+    <div class="lg:hidden bg-emerald-900 text-white p-4 flex justify-between items-center shadow-lg">
+        <h1 class="font-bold">Student Portal</h1>
+        <button @click="openMobileMenu = !openMobileMenu" class="text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation (Desktop) -->
+        <aside class="hidden lg:flex flex-col w-72 bg-white border-r border-slate-200">
+            <div class="p-8 border-b border-slate-100">
+                <div class="flex items-center space-x-3 text-emerald-800">
+                    <span class="text-3xl">🕌</span>
+                    <h1 class="font-black text-xl leading-tight">TADIKA<br><span class="text-sm font-medium text-emerald-600">PORTAL SYSTEM</span></h1>
+                </div>
+            </div>
+            
+            <nav class="flex-1 p-6 space-y-2">
+                <button @click="menu = 'dashboard'" :class="menu === 'dashboard' ? 'sidebar-link-active' : 'text-slate-500 hover:bg-emerald-50'" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl transition">
+                    <i class="fas fa-th-large w-6"></i> <span>แผงควบคุม (Dashboard)</span>
+                </button>
+                <button @click="menu = 'grades'" :class="menu === 'grades' ? 'sidebar-link-active' : 'text-slate-500 hover:bg-emerald-50'" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl transition">
+                    <i class="fas fa-award w-6"></i> <span>ผลการเรียน</span>
+                </button>
+                <button @click="menu = 'schedule'" :class="menu === 'schedule' ? 'sidebar-link-active' : 'text-slate-500 hover:bg-emerald-50'" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl transition">
+                    <i class="fas fa-calendar-alt w-6"></i> <span>ตารางเรียน</span>
+                </button>
+                <button @click="menu = 'docs'" :class="menu === 'docs' ? 'sidebar-link-active' : 'text-slate-500 hover:bg-emerald-50'" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl transition">
+                    <i class="fas fa-file-download w-6"></i> <span>เอกสารสำคัญ</span>
+                </button>
+                <div class="pt-8 mt-8 border-t border-slate-100">
+                    <a href="index.html" class="w-full flex items-center space-x-3 px-4 py-3 text-red-500 hover:bg-red-50 rounded-xl transition">
+                        <i class="fas fa-sign-out-alt w-6"></i> <span>ออกจากระบบ</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 p-4 md:p-10 overflow-y-auto">
+            
+            <!-- Top Bar -->
+            <header class="flex justify-between items-center mb-10">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800" x-text="menu === 'dashboard' ? 'ยินดีต้อนรับกลับมา' : (menu === 'grades' ? 'ผลการเรียน' : (menu === 'schedule' ? 'ตารางเรียน' : 'เอกสาร'))"></h2>
+                    <p class="text-slate-500 text-sm">อัปเดตข้อมูลล่าสุด: 12 ต.ค. 2567</p>
+                </div>
+                <div class="flex items-center space-x-4 bg-white p-2 pr-6 rounded-full shadow-sm border border-slate-200">
+                    <div class="w-10 h-10 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center font-bold">อ</div>
+                    <span class="font-semibold text-slate-700 hidden md:block" x-text="user"></span>
+                </div>
+            </header>
+
+            <!-- Menu Content: DASHBOARD -->
+            <div x-show="menu === 'dashboard'" x-transition class="space-y-8">
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-emerald-700 to-emerald-900 p-8 rounded-3xl text-white shadow-xl">
+                        <p class="opacity-80 mb-1">สถานะการเข้าเรียน</p>
+                        <h3 class="text-4xl font-bold">98.5%</h3>
+                        <div class="mt-4 bg-white/20 h-2 rounded-full overflow-hidden">
+                            <div class="bg-amber-400 h-full w-[98.5%]"></div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                        <p class="text-slate-400 mb-1">ผลการเรียนเฉลี่ย (GPA)</p>
+                        <h3 class="text-4xl font-bold text-emerald-800">3.95</h3>
+                        <p class="text-emerald-500 text-sm mt-2"><i class="fas fa-arrow-up mr-1"></i> ดีเยี่ยม</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                        <p class="text-slate-400 mb-1">ชั่วโมงกิจกรรมสังคม</p>
+                        <h3 class="text-4xl font-bold text-blue-800">24 ชม.</h3>
+                        <p class="text-slate-500 text-sm mt-2">ภาคเรียนที่ 1/2567</p>
+                    </div>
+                </div>
+
+                <!-- Recent Activities & Notifications -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                        <h4 class="font-bold text-lg mb-6 flex items-center"><i class="fas fa-bell mr-3 text-amber-500"></i> ประกาศใหม่จากครู</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4 p-4 hover:bg-slate-50 rounded-xl transition">
+                                <span class="bg-blue-100 text-blue-600 p-3 rounded-lg"><i class="fas fa-bullhorn"></i></span>
+                                <div>
+                                    <p class="font-bold text-slate-700">สอบเก็บคะแนนวิชาเตาฮีด</p>
+                                    <p class="text-sm text-slate-500">วันอาทิตย์นี้ เวลา 09:00 น. ขอให้นักเรียนเตรียมตัวให้พร้อม</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 p-4 hover:bg-slate-50 rounded-xl transition">
+                                <span class="bg-emerald-100 text-emerald-600 p-3 rounded-lg"><i class="fas fa-calendar-check"></i></span>
+                                <div>
+                                    <p class="font-bold text-slate-700">เลื่อนวันปิดภาคเรียน</p>
+                                    <p class="text-sm text-slate-500">ประกาศเลื่อนวันปิดภาคเรียนเป็นวันที่ 20 ตุลาคม</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
+                        <h4 class="font-bold text-lg mb-6 flex items-center"><i class="fas fa-clock mr-3 text-emerald-500"></i> ตารางกิจกรรมวันนี้</h4>
+                        <ul class="space-y-6">
+                            <li class="flex items-center justify-between border-l-4 border-emerald-500 pl-4">
+                                <div>
+                                    <p class="font-bold">วิชาภาษาอาหรับ (กูรูฟ)</p>
+                                    <p class="text-xs text-slate-400">08:45 - 10:15 น. | ห้อง 202</p>
+                                </div>
+                                <span class="text-xs bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">กำลังเรียน</span>
+                            </li>
+                            <li class="flex items-center justify-between border-l-4 border-slate-200 pl-4 opacity-50">
+                                <div>
+                                    <p class="font-bold">พักทานอาหารว่าง</p>
+                                    <p class="text-xs text-slate-400">10:15 - 10:45 น.</p>
+                                </div>
+                                <span class="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full">ถัดไป</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Content: GRADES -->
+            <div x-show="menu === 'grades'" x-transition class="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
+                <table class="w-full text-left">
+                    <thead class="bg-slate-50 text-slate-500 uppercase text-xs tracking-wider">
+                        <tr>
+                            <th class="px-8 py-5">รหัสวิชา / รายวิชา</th>
+                            <th class="px-8 py-5">คะแนนเต็ม</th>
+                            <th class="px-8 py-5">คะแนนที่ได้</th>
+                            <th class="px-8 py-5 text-right">เกรด</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="hover:bg-slate-50">
+                            <td class="px-8 py-5 font-bold text-slate-700">QR101 - อัลกุรอาน (ตัจญ์วีด)</td>
+                            <td class="px-8 py-5">100</td>
+                            <td class="px-8 py-5">92</td>
+                            <td class="px-8 py-5 text-right"><span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full font-bold">4.0</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="px-8 py-5 font-bold text-slate-700">TH201 - เตาฮีด (หลักศรัทธา)</td>
+                            <td class="px-8 py-5">100</td>
+                            <td class="px-8 py-5">85</td>
+                            <td class="px-8 py-5 text-right"><span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full font-bold">4.0</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50">
+                            <td class="px-8 py-5 font-bold text-slate-700">AR301 - ภาษาอาหรับเพื่อการสื่อสาร</td>
+                            <td class="px-8 py-5">100</td>
+                            <td class="px-8 py-5">78</td>
+                            <td class="px-8 py-5 text-right"><span class="bg-amber-100 text-amber-700 px-4 py-1 rounded-full font-bold">3.5</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Menu Content: SCHEDULE -->
+            <div x-show="menu === 'schedule'" x-transition class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-8 rounded-3xl shadow-md border-t-4 border-emerald-600">
+                    <h3 class="font-bold text-xl mb-6 text-emerald-900">ตารางเรียนวันเสาร์</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-emerald-50 rounded-2xl flex justify-between items-center border border-emerald-100">
+                            <div><p class="text-xs text-emerald-600 font-bold uppercase">08:45 - 10:15 น.</p><p class="font-bold text-emerald-900 leading-none mt-1">วิชาภาษาอาหรับ</p></div>
+                            <i class="fas fa-language text-emerald-300 text-2xl"></i>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-2xl flex justify-between items-center">
+                            <div><p class="text-xs text-slate-400 font-bold uppercase">10:45 - 12:00 น.</p><p class="font-bold text-slate-700 leading-none mt-1">วิชาศาสนบัญญัติ (ฟิกฮฺ)</p></div>
+                            <i class="fas fa-mosque text-slate-200 text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-md border-t-4 border-amber-500">
+                    <h3 class="font-bold text-xl mb-6 text-amber-900">ตารางเรียนวันอาทิตย์</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-amber-50 rounded-2xl flex justify-between items-center border border-amber-100">
+                            <div><p class="text-xs text-amber-600 font-bold uppercase">08:45 - 10:15 น.</p><p class="font-bold text-amber-900 leading-none mt-1">วิชาอัลกุรอาน</p></div>
+                            <i class="fas fa-quran text-amber-300 text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Content: DOCUMENTS -->
+            <div x-show="menu === 'docs'" x-transition class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl border flex items-center justify-between hover:shadow-md transition cursor-pointer group">
+                    <div class="flex items-center space-x-4">
+                        <div class="text-red-500 text-3xl"><i class="fas fa-file-pdf"></i></div>
+                        <div><p class="font-bold">ใบประกาศนียบัตรปีการศึกษา 2566</p><p class="text-xs text-slate-400 italic">ไฟล์ PDF - 2.4 MB</p></div>
+                    </div>
+                    <i class="fas fa-download text-slate-300 group-hover:text-emerald-600 transition"></i>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border flex items-center justify-between hover:shadow-md transition cursor-pointer group">
+                    <div class="flex items-center space-x-4">
+                        <div class="text-blue-500 text-3xl"><i class="fas fa-file-word"></i></div>
+                        <div><p class="font-bold">คู่มือนักเรียนภาคเรียนที่ 2/2567</p><p class="text-xs text-slate-400 italic">ไฟล์ DOCX - 1.1 MB</p></div>
+                    </div>
+                    <i class="fas fa-download text-slate-300 group-hover:text-emerald-600 transition"></i>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
