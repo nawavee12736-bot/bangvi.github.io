@@ -1,58 +1,199 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+
 <meta charset="UTF-8">
-<title>หน้าแรก | เว็บไซต์โรงเรียน</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>School University</title>
+
 <link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+
 </head>
 
 <body>
 
-<header>
-<h1>โรงเรียนของเรา</h1>
-<p>Official School Website</p>
-</header>
 
-<nav>
-<a href="index.html">หน้าแรก</a>
-<a href="about.html">เกี่ยวกับโรงเรียน</a>
-<a href="news.html">ข่าวสาร</a>
-<a href="gallery.html">กิจกรรม</a>
-<a href="contact.html">ติดต่อ</a>
-</nav>
+<header class="header">
 
-<div class="hero">
-ยินดีต้อนรับสู่โรงเรียนของเรา
+<div class="logo">
+<h2>School University</h2>
 </div>
 
-<div class="container">
+<nav id="nav">
 
-<h2>ข่าวล่าสุด</h2>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="admission.html">Admissions</a>
+<a href="news.html">News</a>
+<a href="gallery.html">Campus</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Building Future Leaders</h1>
+
+<p>Excellence in Education, Innovation and Character Development</p>
+
+<a class="btn" href="admission.html">Apply Now</a>
+
+</div>
+
+</section>
+
+
+
+<section class="section announcement">
+
+<h2>Announcements</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>กิจกรรมวันวิชาการ</h3>
-<p>โรงเรียนจัดกิจกรรมส่งเสริมการเรียนรู้ของนักเรียน</p>
+<h3>2026 Admission Open</h3>
+<p>Applications for the 2026 academic year are now open.</p>
 </div>
 
 <div class="card">
-<h3>การแข่งขันกีฬา</h3>
-<p>นักเรียนเข้าร่วมการแข่งขันกีฬาระดับจังหวัด</p>
+<h3>Scholarship Program</h3>
+<p>Scholarships available for outstanding students.</p>
 </div>
 
 <div class="card">
-<h3>กิจกรรมจิตอาสา</h3>
-<p>นักเรียนร่วมกิจกรรมพัฒนาชุมชน</p>
+<h3>International Collaboration</h3>
+<p>New partnerships with international institutions.</p>
 </div>
+
+</div>
+
+</section>
+
+
+
+<section class="section gray">
+
+<h2>Academic Programs</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Science & Technology</h3>
+<p>Advanced research and innovation programs.</p>
+</div>
+
+<div class="card">
+<h3>Languages</h3>
+<p>Multilingual education and communication skills.</p>
+</div>
+
+<div class="card">
+<h3>Business & Leadership</h3>
+<p>Preparing students for global leadership.</p>
+</div>
+
+<div class="card">
+<h3>Islamic Studies</h3>
+<p>Strong foundation in Islamic knowledge and values.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<h2>Campus Life</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7">
+
+<img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b">
+
+<img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+
+<img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+
+</div>
+
+</section>
+
+
+
+<section class="cta">
+
+<h2>Start Your Academic Journey Today</h2>
+
+<p>Join a community dedicated to excellence in education.</p>
+
+<a class="btn" href="admission.html">Apply For Admission</a>
+
+</section>
+
+
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>About University</h3>
+
+<p>
+Our institution provides quality education and
+develops future leaders with strong values.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p>Admissions</p>
+<p>Programs</p>
+<p>Research</p>
+<p>Campus Life</p>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<p>Hat Yai, Thailand</p>
+<p>Tel: 012-3456789</p>
+<p>Email: school@email.com</p>
 
 </div>
 
 </div>
 
-<footer>
-<p>© 2026 School Website</p>
+
+<p class="copyright">
+
+© 2026 School University
+
+</p>
+
 </footer>
+
 
 </body>
 </html>
