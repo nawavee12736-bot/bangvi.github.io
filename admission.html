@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รับสมัครเรียน | โรงเรียนตาดีกาพรีเมียม</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Prompt', sans-serif; }
+        .step-number {
+            width: 40px; height: 40px;
+            display: flex; items-center; justify-content: center;
+            border-radius: 50%; background: #10b981; color: white;
+            font-weight: bold; font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- Navigation (รักษาความต่อเนื่องจากหน้าก่อนๆ) -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <span class="text-3xl">🕌</span>
+                <h1 class="text-xl font-bold text-emerald-900">ตาดีกาพรีเมียม</h1>
+            </a>
+            <div class="hidden lg:flex space-x-8 font-medium text-gray-600">
+                <a href="index.html" class="hover:text-emerald-700">หน้าแรก</a>
+                <a href="about.html" class="hover:text-emerald-700">รู้จักโรงเรียน</a>
+                <a href="curriculum.html" class="hover:text-emerald-700">หลักสูตร</a>
+                <a href="gallery.html" class="hover:text-emerald-700">กิจกรรม</a>
+                <a href="contact.html" class="hover:text-emerald-700">ติดต่อเรา</a>
+            </div>
+            <a href="admission.html" class="bg-emerald-800 text-white px-6 py-2 rounded-full font-bold border-b-2 border-emerald-900">รับสมัครเรียน</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-slate-900 py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center text-white" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-amber-400">เริ่มต้นการเดินทางแห่งศรัทธา</h1>
+            <p class="text-xl opacity-80 max-w-2xl mx-auto font-light italic">
+                เปิดรับสมัครนักเรียนใหม่ทุกระดับชั้น ร่วมพัฒนาเยาวชนสู่อนาคตที่สดใส
+            </p>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <img src="https://www.transparenttextures.com/patterns/islamic-art.png" class="w-full h-full object-repeat">
+        </div>
+    </header>
+
+    <!-- Admission Steps -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-emerald-900 mb-2">ขั้นตอนการสมัครเรียน</h2>
+            <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Step 1 -->
+            <div class="p-8 bg-emerald-50 rounded-3xl relative" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-number shadow-lg">1</div>
+                <h3 class="font-bold text-xl mb-3 text-emerald-900">กรอกใบสมัคร</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">กรอกข้อมูลผ่านระบบออนไลน์ หรือเดินทางเข้ามาสมัครด้วยตนเองที่ห้องธุรการ</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="p-8 bg-emerald-50 rounded-3xl relative" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-number shadow-lg">2</div>
+                <h3 class="font-bold text-xl mb-3 text-emerald-900">ยื่นเอกสาร</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">เตรียมเอกสารสำเนาบัตรประชาชน/ทะเบียนบ้าน และสูติบัตรให้ครบถ้วน</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="p-8 bg-emerald-50 rounded-3xl relative" data-aos="fade-up" data-aos-delay="300">
+                <div class="step-number shadow-lg">3</div>
+                <h3 class="font-bold text-xl mb-3 text-emerald-900">สัมภาษณ์</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">การพูดคุยเพื่อทำความเข้าใจเป้าหมายการเรียนร่วมกันระหว่างครู นักเรียน และผู้ปกครอง</p>
+            </div>
+            <!-- Step 4 -->
+            <div class="p-8 bg-emerald-800 text-white rounded-3xl relative" data-aos="fade-up" data-aos-delay="400">
+                <div class="step-number bg-amber-500 text-emerald-900 shadow-lg">4</div>
+                <h3 class="font-bold text-xl mb-3 text-white">ลงทะเบียน</h3>
+                <p class="opacity-80 text-sm leading-relaxed text-emerald-50">ชำระค่าธรรมเนียมการศึกษาและรับชุดนักเรียน พร้อมเข้าสู่ครอบครัวของเรา</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Required Documents & Fees -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Documents -->
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-emerald-900 mb-8 flex items-center">
+                        <i class="fas fa-file-invoice-dollar mr-4 text-amber-500"></i> เอกสารที่ต้องใช้
+                    </h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <div>
+                                <span class="font-bold block">ใบสมัครที่กรอกข้อมูลครบถ้วน</span>
+                                <span class="text-sm text-gray-500 italic">(ดาวน์โหลดจากเว็บไซต์หรือรับที่โรงเรียน)</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <span>สำเนาสูติบัตรของนักเรียน (1 ชุด)</span>
+                        </li>
+                        <li class="flex items-start p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <span>สำเนาทะเบียนบ้านและบัตรประชาชนผู้ปกครอง (1 ชุด)</span>
+                        </li>
+                        <li class="flex items-start p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                            <i class="fas fa-check-circle text-emerald-500 mt-1 mr-3"></i>
+                            <span>รูปถ่ายขนาด 1.5 นิ้ว (จำนวน 3 รูป)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Fees Table -->
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-emerald-900 mb-8 flex items-center">
+                        <i class="fas fa-coins mr-4 text-amber-500"></i> อัตราค่าธรรมเนียม
+                    </h2>
+                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="bg-emerald-800 text-white">
+                                    <th class="py-4 px-6 font-bold">รายการ</th>
+                                    <th class="py-4 px-6 font-bold text-right">จำนวน (บาท)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-700">
+                                <tr class="border-b">
+                                    <td class="py-4 px-6 font-medium">ค่าธรรมเนียมแรกเข้า (จ่ายครั้งเดียว)</td>
+                                    <td class="py-4 px-6 text-right font-bold">500.-</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-4 px-6 font-medium">ค่าธรรมเนียมรายเดือน (ระดับตัมฮีดีย์)</td>
+                                    <td class="py-4 px-6 text-right font-bold text-emerald-700">300.-</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="py-4 px-6 font-medium">ค่าธรรมเนียมรายเดือน (ระดับอิบติดาอีย์)</td>
+                                    <td class="py-4 px-6 text-right font-bold text-emerald-700">400.-</td>
+                                </tr>
+                                <tr class="bg-amber-50">
+                                    <td class="py-4 px-6 font-medium text-amber-900 italic">ทุนการศึกษาสำหรับครอบครัวที่มีลูกเรียน 2 คนขึ้นไป</td>
+                                    <td class="py-4 px-6 text-right font-bold text-amber-700">ส่วนลด 20%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-4 text-xs text-gray-500">* หมายเหตุ: ค่าธรรมเนียมไม่รวมค่าเครื่องแบบและอุปกรณ์การเรียนพื้นฐาน</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Online Form Button -->
+    <section class="py-24 bg-emerald-900 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl font-bold text-white mb-8">พร้อมสมัครออนไลน์แล้วใช่ไหม?</h2>
+            <p class="text-emerald-100 text-lg mb-10 opacity-80 leading-relaxed">
+                อำนวยความสะดวกให้ผู้ปกครอง ประหยัดเวลาในการเดินทาง <br>
+                เพียงกรอกข้อมูลเบื้องต้นผ่านระบบ เจ้าหน้าที่จะติดต่อกลับภายใน 24 ชม.
+            </p>
+            <a href="https://forms.google.com/your-form-link" target="_blank" class="inline-block bg-amber-500 text-emerald-950 font-black text-xl px-12 py-5 rounded-2xl hover:bg-white hover:scale-105 transition shadow-2xl">
+                <i class="fas fa-edit mr-3"></i> เข้าสู่หน้าสมัครเรียนออนไลน์
+            </a>
+        </div>
+        <!-- Decorative Elements -->
+        <div class="absolute -left-20 top-0 text-[300px] text-white opacity-5 pointer-events-none italic">Apply</div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-6 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-emerald-900 mb-12 italic underline decoration-amber-500">คำถามที่พบบ่อย (FAQ)</h2>
+        <div class="space-y-4">
+            <details class="group bg-white rounded-2xl p-6 border border-slate-200 shadow-sm open:shadow-md transition">
+                <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-emerald-900">
+                    <span>ต้องเตรียมเงินสดมาชำระในวันสมัครเลยหรือไม่?</span>
+                    <span class="group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down text-sm"></i></span>
+                </summary>
+                <p class="mt-4 text-gray-600 leading-relaxed">ท่านสามารถชำระผ่านแอปพลิเคชันธนาคาร (QR Code) หรือโอนเงินเข้าบัญชีโรงเรียนได้ในวันสมัคร เพื่อความสะดวกและปลอดภัยครับ</p>
+            </details>
+            <details class="group bg-white rounded-2xl p-6 border border-slate-200 shadow-sm open:shadow-md transition">
+                <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-emerald-900">
+                    <span>เปิดรับสมัครในช่วงเดือนใดบ้าง?</span>
+                    <span class="group-open:rotate-180 transition-transform"><i class="fas fa-chevron-down text-sm"></i></span>
+                </summary>
+                <p class="mt-4 text-gray-600 leading-relaxed">ปกติจะเปิดรับสมัครช่วงเดือน มีนาคม - พฤษภาคม สำหรับภาคเรียนที่ 1 และช่วงเดือน ตุลาคม สำหรับภาคเรียนที่ 2 อย่างไรก็ตาม ท่านสามารถยื่นใบสมัครล่วงหน้าได้ตลอดเวลาครับ</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Footer (เหมือนกันทุกหน้า) -->
+    <footer class="bg-slate-900 text-slate-500 py-12 px-6 text-center text-sm">
+        <p>&copy; 2024 Tadika Premium Academy. Excellence in Islamic Foundation.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
